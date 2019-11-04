@@ -1,6 +1,11 @@
 # Q0: Why are these two errors being thrown?
 
+1. The model has not been migrated to database yet
+2. we havn't defined Pokemon model yet.
+
 # Q1: How are the random Pokemon appearing? What is the common factor between all the possible Pokemon that appear? *
+
+Everty time we refresh the website a new wild pokemon will appear. There're only 4 possible pokemons appeared which is defined in seeds.rb
 
 # Question 2a: What does the following line do "<%= button_to "Throw a Pokeball!", capture_path(id: @pokemon), :class => "button medium", :method => :patch %>"? Be specific about what "capture_path(id: @pokemon)" is doing. If you're having trouble, look at the Help section in the README.
 
