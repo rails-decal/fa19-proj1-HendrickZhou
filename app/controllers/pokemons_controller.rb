@@ -10,4 +10,16 @@ class PokemonsController < ApplicationController
 
 		redirect_to root_path
 	end
+
+	def damage
+		pok = Pokemon.find(params[:id])
+		curr_health = pok.health
+		if curr_health <= 10
+			pok.destroy
+		else
+			pok.update(health: pok.health - 10)
+			pok.save
+		end
+		redirect_to trainer_path current_trainer.id
+	end
 end

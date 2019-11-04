@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to: "home#index"
   resources :trainers
   patch '/pokemons/capture', as: 'capture'
+  patch '/pokemons/damage', as: 'damage'
 end
