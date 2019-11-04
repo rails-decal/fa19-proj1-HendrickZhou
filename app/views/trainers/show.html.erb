@@ -1,3 +1,11 @@
 <h3>Trainer</h3>
 <p>Name: <%= @trainer.name if @trainer.name %></p>
 <p>Email: <%= @trainer.email if @trainer.email %></p>
+
+<p>Pokemons</p>
+<% @pokemons.each do |pokemon| %>
+	<% if pokemon.ndex %>
+		<%= image_tag("pokemon/#{pokemon.ndex}.png", alt: "pokemon")%>
+	<% end %>
+<% end %>
+
