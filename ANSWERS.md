@@ -9,6 +9,8 @@ Everty time we refresh the website a new wild pokemon will appear. There're only
 
 # Question 2a: What does the following line do "<%= button_to "Throw a Pokeball!", capture_path(id: @pokemon), :class => "button medium", :method => :patch %>"? Be specific about what "capture_path(id: @pokemon)" is doing. If you're having trouble, look at the Help section in the README.
 
+On the front end it shows a button "Throa sa pokeball", and `capture_path` , which is a nickname of  `capture `method in Pokemon's controller, will grab the id of this pokemon generated and set this pokemon's trainer id to the logged in user's id.
+
 # Question 3: What would you name your own Pokemon?
 
 # Question 4: What did you pass into the redirect_to? If it is a path, what did that path need? If it is not a path, why is it okay not to have a path here?
