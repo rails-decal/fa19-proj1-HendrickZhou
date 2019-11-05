@@ -17,7 +17,11 @@ If this is not project related, probably name it Oski.
 
 # Question 4: What did you pass into the redirect_to? If it is a path, what did that path need? If it is not a path, why is it okay not to have a path here?
 
+A path with parameters like the trainer's id
+
 # Question 5: Explain how putting this line "flash[:error] = @pokemon.errors.full_messages.to_sentence" shows error messages on your form.
+
+Put it under the `else` branch(meaning the model is not successfully saved), this will give us a fancier error prompt.
 
 # Give us feedback on the project and decal below!
 
