@@ -1,0 +1,14 @@
+<%#= I have to add url: new_path here see: https://stackoverflow.com/questions/25086366/undefined-method-path-with-simple-form 
+also dont forget the <%= in the first line, or it wont show a thing %>
+<%= simple_form_for @pokemon, url: new_path do |f| %>
+	<%= f.input :name %>
+	<%= f.collection_radio_buttons(
+	    :ndex, (1..20).map {|ndex| [ndex, ndex]}, :first, :last
+	  ) do |b| %>
+	  <div class="pokemon-choice-container">
+	    <%= b.label { image_tag("pokemon/#{b.text}.png") + b.radio_button } %>
+	  </div>
+	<% end %>
+
+	<%= f.button :submit, class: "create-pokemon-btn" %>
+<% end %>

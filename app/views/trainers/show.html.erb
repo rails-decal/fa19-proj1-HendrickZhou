@@ -3,13 +3,16 @@
 <p>Email: <%= @trainer.email if @trainer.email %></p>
 
 <p>Pokemons</p>
+<% if current_trainer %>
+<p> create my own pokemon</p>
+	<%= button_to "Create", new_path, :class => "button medium", :method => :get %>
+<% end %>
 <% @pokemons.each do |pokemon| %>
 	<% if pokemon.ndex %>
 		<%= image_tag("pokemon/#{pokemon.ndex}.png", alt: "pokemon")%>
 		Health:
 		<%= pokemon.health %>
 		<%= button_to "Damage!", damage_path(id: pokemon), :class => "button medium", :method => :patch %>
-		<br>
 	<% end %>
 <% end %>
 

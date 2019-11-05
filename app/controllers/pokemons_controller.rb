@@ -22,4 +22,12 @@ class PokemonsController < ApplicationController
 		end
 		redirect_to trainer_path current_trainer.id
 	end
+
+	def new
+		puts "we good here"
+		@pokemon = Pokemon.new
+	end
+
+
+
 end
